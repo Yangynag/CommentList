@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CommentView</string>
+    <string name="show_more">展开</string>
+    <string name="hide">收起</string>
+</resources>

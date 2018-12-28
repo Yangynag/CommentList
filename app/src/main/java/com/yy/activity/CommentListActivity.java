@@ -2,9 +2,9 @@ package com.yy.activity;
 
 import android.os.Bundle;
 
+import com.commentview.DataBean;
 import com.yy.commentlist.CommentListAdapter;
 import com.yy.commentlist.R;
-import com.yy.data.DataBean;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +25,7 @@ public class CommentListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_comment_list_layout);
         rcv = findViewById(R.id.rcv);
         rcv.setLayoutManager(new LinearLayoutManager(this));
-        commentListAdapter = new CommentListAdapter(this, R.layout.item_comment_layout);
+        commentListAdapter = new CommentListAdapter(this, R.layout.item_comment);
         rcv.setAdapter(commentListAdapter);
         initData();
     }
@@ -40,10 +40,9 @@ public class CommentListActivity extends AppCompatActivity {
                 innerData.color = getResources().getColor(R.color.black);
                 dataBean.commentList.add(innerData);
             }
-            dataBean.showSize = 3;
             dataBeanList.add(dataBean);
         }
-        commentListAdapter.setData(dataBeanList);
+        commentListAdapter.setDataBeanList(dataBeanList);
         commentListAdapter.notifyDataSetChanged();
     }
 }
