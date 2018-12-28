@@ -23,7 +23,6 @@ public class CommentViewGroup extends LinearLayout implements View.OnClickListen
     }
 
     ViewStub viewStub;
-
     public void setViewStub(ViewStub viewStub) {
         this.viewStub = viewStub;
     }
